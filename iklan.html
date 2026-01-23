@@ -2,6 +2,7 @@
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendaftaran Ceramah Berbayar</title>
     <style>
         body {
@@ -26,6 +27,12 @@
             padding: 8px;
             margin-top: 5px;
         }
+
+        input[type="checkbox"] {
+              width: auto;
+             margin-right: 8px;
+        }
+
         button {
             margin-top: 15px;
             padding: 10px;
@@ -41,6 +48,10 @@
 
     <!-- FASA 1 -->
     <h1>Ceramah Profesional: Teknologi Akan Datang</h1>
+
+     <img src="sabri.jpeg" alt="Encik Sabri Bin Saep"
+     style="width:180px; display:block; margin:auto; border-radius:50%;">
+
     <p><strong>Penceramah:</strong> Encik Sabri Bin Saep (Pakar IT)</p>
     <p><strong>Peserta dapat mengetahui lebih mendalam tentang IT.</strong></p>
     <p><strong>Tarikh:</strong> 20 Februari 2026</p>
@@ -78,10 +89,11 @@
         <label>Bukti Pembayaran</label>
         <input type="file" name="bukti" required>
 
-        <label>
-            <input type="checkbox" required>
-            Saya bersetuju dengan Terma & Syarat
-        </label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="terma" required>
+            <label for="terma">Saya bersetuju dengan Terma & Syarat</label>
+        </div>
+           
 
         <button type="submit">Hantar</button>
     </form>
